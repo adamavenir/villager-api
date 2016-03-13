@@ -26,8 +26,7 @@ exports.up = function(knex) {
             table.text('about');
             table.boolean('approved');
             // table.uuid.('created_by').references.('users.id').onDelete('CASCADE');
-            table.timestamp('created_at').defaultTo(knex.fn.now());
-            table.timestamp('updated_at').defaultTo(knex.fn.now());
+            table.timestamp('date_updated').defaultTo(knex.fn.now());
         })
 };
 
