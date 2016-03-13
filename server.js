@@ -19,11 +19,11 @@ server.register([{
     
     server.bind({ db : db });
     
-    // server.route({ method: 'GET', path: '/places', config: Controllers.places.list });
-    // server.route({ method: 'GET', path: '/places/{id}', config: Controllers.places.get });
+    server.route({ method: 'GET', path: '/places', config: Controllers.places.list });
+    server.route({ method: 'GET', path: '/places/{id}', config: Controllers.places.get });
     server.route({ method: 'POST', path: '/places/new', config: Controllers.places.create });
     // server.route({ method: 'PUT', path: '/places/{id}', config: Controllers.places.update });
-    // server.route({ method: 'DELETE', path: '/places/{id}', config: Controllers.places.delete });
+    server.route({ method: 'DELETE', path: '/places/{id}', config: Controllers.places.delete });
     
     if (module.parent) {
         return;
