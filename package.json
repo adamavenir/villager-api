@@ -25,10 +25,12 @@
   },
   "homepage": "https://github.com/adambrault/villager-api#readme",
   "dependencies": {
+    "boom": "^3.1.2",
     "getconfig": "^2.2.0",
     "good": "^6.6.0",
     "good-console": "^5.3.1",
     "hapi": "^13.2.1",
+    "joi": "^8.0.4",
     "knex": "^0.10.0",
     "muckraker": "^3.2.1",
     "pg": "^4.5.1",
