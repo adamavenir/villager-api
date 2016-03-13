@@ -5,16 +5,17 @@ exports.up = function(knex) {
     return knex.schema
         .createTable('users', (table) => {
             
-            table.uuid('id').primary();
+            table.increments('id').primary();
             table.uuid('name');
             table.string('slug').unique();
         })
         .createTable('places', (table) => {
 
-            table.uuid('id').primary();
+            table.increments('id').primary();
             table.string('slug').unique();
             table.string('name');
-            table.specificType('type', 'text[]');
+            // table.specificType('type', 'text[]');
+            table.string('type');
             table.string('phone');
             table.string('address');
             table.string('city');

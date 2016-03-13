@@ -3,8 +3,11 @@
 const Slug = require('slug');
 
 module.exports = {
+    
     description: 'Create a Place',
     handler: function (request, reply) {
+        
+        console.log('this ', this.db)
         
         const now = new Date();
         const slug = `${Slug(request.payload.name, { lower: true })}`;
